@@ -7,6 +7,6 @@
 - 👯 I’m looking to collaborate on projects that can make a real-world impact
 - 🤔 I’m looking to help others in their journey to help soldify my learning
 - 📫 You can contact me at [Jacastanon01\@gmail.com](mailto:jacastanon01@gmail.com?subject=I%20saw%20your%20profile%20on%20GitHub!)
-  #### Or Connect with me on LinkedIn:
+  #### Connect with me on LinkedIn:
   [![linkedin](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/jacob-castanon-b76490168/)
 
