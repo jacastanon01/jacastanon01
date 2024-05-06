@@ -1,21 +1,18 @@
-# 💪 What up! My name is Jacob 
-
 <div align="center">
+
+  # 💪 What up! My name is Jacob
   
+![My Skills](https://skillicons.dev/icons?i=python,js,react,ts,next,vite,nodejs,tailwind,mongodb,postgres,sqlite,bash) 
 ![My skills](https://github-readme-stats.vercel.app/api/top-langs/?username=jacastanon01&theme=transparent&exclude_repo=MoRent,Jobit&layout=donut&hide_border=true)
-![Stats](https://github-readme-stats.vercel.app/api?username=jacastanon01&show_icons=true&hide=issues&count_private=true&hide_border=true&theme=transparent)
 
 </div>
 
 <hr />
 
 
-### My most used skills
-![My Skills](https://skillicons.dev/icons?i=python,js,react,ts,next,vite,nodejs,tailwind,mongodb,postgres,sqlite,bash) 
 
----
 ### What I'm up to these days
-- 🧠 Currently expanding my knowledge of programming fundamentals by participating in [CS50](https://cs50.harvard.edu/x/2024/) and boot.dev
+- 🧠 Currently expanding my knowledge of programming fundamentals by participating in [CS50](https://cs50.harvard.edu/x/2024/) and [boot.dev](https://www.boot.dev/u/cast-a-none)
 - 👾 Exploring the history of programming through [this series](https://github.com/realityexpander/How_to_program_from_ground_up/tree/main)
 - 🌱 Enjoy working with React and Python
 - 👯 Looking to collaborate on projects that can make a real-world impact and contribute to open source projects I believe in
