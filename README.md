@@ -1,7 +1,6 @@
 <div align="center">
 
-  # 💪 What up! My name is Jacob
-  
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=30&duration=3000&pause=100&center=true&vCenter=true&repeat=false&random=false&width=684&height=91&lines=%F0%9F%92%AA+What+up!;My+name+is+Jacob;Check+out+the+cool+stuff+I've+built)](https://git.io/typing-svg)
 ![My Skills](https://skillicons.dev/icons?i=python,js,react,ts,next,vite,nodejs,tailwind,mongodb,postgres,sqlite,bash) 
 ![My skills](https://github-readme-stats.vercel.app/api/top-langs/?username=jacastanon01&theme=transparent&exclude_repo=MoRent,Jobit&layout=donut&hide_border=true)
 
