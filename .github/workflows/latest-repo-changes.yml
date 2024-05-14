@@ -1,14 +1,14 @@
 name: Update README
-on: 
+on:
   push:
     branches:
-      - origin/main
+      - main
 jobs:
   update_readme:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         
       - name: Set environment variables
         env:
@@ -21,21 +21,21 @@ jobs:
           
       - name: Get latest changes from the repository
         run: |
-          echo ${{ github.event.repository }}
+          echo ${{ github.event.repository.name }}
           git fetch origin --prune --tags --force
           git checkout main
           
       - name: Update README to include repo with latest commit
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && github.event.repository.url == 'https://github.com/${{ github.event.repository.name }}'
         run: |
           echo "Latest changes:" >> README.md
           for repo in $(git ls-remote --get-url); do
             echo $repo
-            if [ "$repo" == "https://github.com/${{ github.event.repository.name }}.git" ]; then
+            if [ "$repo" == "https://github.com/${{ github.event.repository.name }} .git" ]; then
               echo "- [$repo](https://github.com/$repo)" >> README.md
             fi
           done
-
+          
       - name: List last 3 commits from all repositories
         run: |
           git log -3 --format=%H --all >> README.md
