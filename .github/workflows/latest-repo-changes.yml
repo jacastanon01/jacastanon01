@@ -1,0 +1,25 @@
+name: Update README
+on: push
+jobs:
+  update_readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Get latest changes from the repository
+        run: |
+          git fetch origin --prune --tags --force
+          git checkout main
+      - name: Update README with latest changes
+        if: github.event_name == 'push' && github.event.repository.url == jacastanon01/${{ github.event.repository.name }}
+        run: |
+          echo "Latest changes:" >> README.md
+          for repo in $(git ls-remote --get-url); do
+            if [ "$repo" == "jacastanon01/${github.event.repository.name}" ]; then
+              echo "- [$repo](https://github.com/$repo)" >> README.md
+            fi
+          done
+      - name: Commit changes to README
+        run: |
+          git add .
+          git commit -m "Update README with latest changes"
