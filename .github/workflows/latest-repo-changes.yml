@@ -10,10 +10,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         
-      - name: Set Git identity
+      - name: Set environment variables
         env:
           GIT_AUTHOR_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
           GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "$GIT_AUTHOR_NAME"
           git config user.email "$GIT_AUTHOR_EMAIL"
@@ -25,12 +26,12 @@ jobs:
           git checkout main
           
       - name: Update README to include repo with latest commit
-        if: github.event_name == 'push' && github.event.repository.url == 'https://github.com/${{ github.event.repository.name }}'
+        if: github.event_name == 'push'
         run: |
           echo "Latest changes:" >> README.md
           for repo in $(git ls-remote --get-url); do
             echo $repo
-            if [ "$repo" == "https://github.com/jacastanon01/${{ github.event.repository.name }}.git" ]; then
+            if [ "$repo" == "https://github.com/${{ github.event.repository.name }}.git" ]; then
               echo "- [$repo](https://github.com/$repo)" >> README.md
             fi
           done
