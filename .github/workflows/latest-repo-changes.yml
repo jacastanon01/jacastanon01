@@ -2,7 +2,7 @@ name: Update README
 on: 
   push:
     branches:
-      - main
+      - origin/main
 jobs:
   update_readme:
     runs-on: ubuntu-latest
@@ -21,7 +21,7 @@ jobs:
           
       - name: Get latest changes from the repository
         run: |
-          echo ${{ github.event.repository.name }}
+          echo ${{ github.event.repository }}
           git fetch origin --prune --tags --force
           git checkout main
           
