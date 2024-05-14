@@ -1,5 +1,7 @@
 name: Update README
-on: push
+on:
+  push:
+    branches: ["main", "origin/main"]
   
 jobs:
   update_readme:
@@ -22,9 +24,8 @@ jobs:
           echo ${{ github.event.repository.name }}
           git fetch origin --prune --tags --force
           git checkout main
-          
+        
       - name: Update README to include repo with latest commit
-        if: github.event_name == 'push' && github.event.repository.url == 'https://github.com/${{ github.event.repository.name }}'
         run: |
           echo "Latest changes:" >> README.md
           for repo in $(git ls-remote --get-url); do
@@ -32,7 +33,7 @@ jobs:
             if [ "$repo" == "https://github.com/${{ github.event.repository.name }} .git" ]; then
               echo "- [$repo](https://github.com/$repo)" >> README.md
             fi
-          done
+          
           
       - name: List last 3 commits from all repositories
         run: |
