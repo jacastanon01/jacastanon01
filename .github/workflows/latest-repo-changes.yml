@@ -8,7 +8,7 @@ jobs:
         uses: actions/setup-node@v4
       - name: Get latest changes from the repository
         run: |
-          echo ${github.event.repository.name}
+          echo "${github.event.repository.name}"
           git fetch origin --prune --tags --force
           git checkout main
           
