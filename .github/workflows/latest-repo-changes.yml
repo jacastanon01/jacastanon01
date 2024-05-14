@@ -37,7 +37,7 @@ jobs:
 
       - name: List last 3 commits from all repositories
         run: |
-          git log --format=%H --all --limit=3 >> README.md
+          git log -3 --format=%H --all >> README.md
           
       - name: Commit changes to README
         run: |
