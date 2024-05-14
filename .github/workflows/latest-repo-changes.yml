@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/setup-node@v4
+        uses: actions/checkout@v4
       - name: Get latest changes from the repository
         run: |
           echo "${github.event.repository.name}"
