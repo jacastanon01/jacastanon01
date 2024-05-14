@@ -27,6 +27,7 @@ jobs:
         run: |
           echo "Latest changes:" >> README.md
           for repo in $(git ls-remote --get-url); do
+            echo $repo
             if [ "$repo" == "jacastanon01/${{ github.event.repository.name }}" ]; then
               echo "- [$repo](https://github.com/$repo)" >> README.md
             fi
