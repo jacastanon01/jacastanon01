@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        
       - name: Set Git identity
         env:
           GIT_AUTHOR_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
@@ -16,22 +17,28 @@ jobs:
         run: |
           git config user.name "$GIT_AUTHOR_NAME"
           git config user.email "$GIT_AUTHOR_EMAIL"
+          
       - name: Get latest changes from the repository
         run: |
           echo ${{ github.event.repository.name }}
           git fetch origin --prune --tags --force
           git checkout main
           
-      - name: Update README with latest changes
+      - name: Update README to include repo with latest commit
         if: github.event_name == 'push' && github.event.repository.url == 'https://github.com/jacastanon01/${{ github.event.repository.name }}'
         run: |
           echo "Latest changes:" >> README.md
           for repo in $(git ls-remote --get-url); do
             echo $repo
-            if [ "$repo" == "jacastanon01/${{ github.event.repository.name }}" ]; then
+            if [ "$repo" == "https://github.com/jacastanon01/${{ github.event.repository.name }}" ]; then
               echo "- [$repo](https://github.com/$repo)" >> README.md
             fi
           done
+
+      - name: List last 3 commits from all repositories
+        run: |
+          git log --format=%H --all --limit=3 >> README.md
+          
       - name: Commit changes to README
         run: |
           git add .
