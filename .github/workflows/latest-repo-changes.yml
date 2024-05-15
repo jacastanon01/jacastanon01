@@ -1,7 +1,10 @@
 name: Update README
 on:
   push:
-    branches: ["main", "origin/main"]
+    branches: ["main"]
+    tags: ["v/*"]
+    paths:
+      - "README.md"
   
 jobs:
   update_readme:
@@ -26,6 +29,7 @@ jobs:
           git checkout main
         
       - name: Update README to include repo with latest commit
+        if: github.event.repository.url == 'https://github.com/${{ github.event.repository.owner.login }}/${{ github.event.repository.name }}' || github.event.repository.url == 'https://github.com/${{ github.event.repository.owner.login }}/${{ github.event.repository.name }}'
         run: |
           echo "Latest changes:" >> README.md
           for repo in $(git ls-remote --get-url); do
