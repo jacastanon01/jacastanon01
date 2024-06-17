@@ -1,5 +1,3 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=jacastanon01.jacastanon01" />
-
 <div align="center">
 
   [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=30&duration=3000&pause=100&center=true&vCenter=true&repeat=false&random=false&width=684&height=91&lines=%F0%9F%92%AA+What+up!;My+name+is+Jacob;Check+out+the+cool+stuff+I've+built)](https://git.io/typing-svg)
@@ -16,12 +14,12 @@
 </div>
 
 ---
-- 🧠 Currently expanding my knowledge of programming fundamentals by participating in [CS50](https://cs50.harvard.edu/x/2024/) and [boot.dev](https://www.boot.dev/u/cast-a-none)
-- 👾 Exploring the history of programming through [this series](https://github.com/realityexpander/How_to_program_from_ground_up/tree/main)
 - 🌱 Enjoy working with React and Python
 - 👯 Looking to collaborate on projects that can make a real-world impact and contribute to open source projects I believe in
 - 🤔 Always eager to help others in their journey while I continue to define mine
 ---
+
+<img style="display:hidden" align="right" src="https://visitor-badge.laobi.icu/badge?page_id=jacastanon01.jacastanon01" />
 
 <div align="center"> 
   <a href="mailto:jacastanon01@gmail.com">
