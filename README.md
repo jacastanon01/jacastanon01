@@ -20,7 +20,7 @@
 ---
 
   
-<img width=0 height=0 align="right" src="https://visitor-badge.laobi.icu/badge?page_id=jacastanon01.jacastanon01" />
+<img width=1 height=1 align="right" src="https://visitor-badge.laobi.icu/badge?page_id=jacastanon01.jacastanon01" />
 <div align="center"> 
   <a href="mailto:jacastanon01@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
